@@ -1,0 +1,22 @@
+#### Criar novo portal_nf
+POST http://localhost:8080/auction HTTP/1.1
+Content-Type: application/json
+
+{
+    "product_name": "Esteira ergométrica",
+    "category": "Fitness",
+    "description": "Esteira marca Fatburn.io, suporta 12 Km/h e 100 Kg",
+    "condition": 0
+}
+
+####
+# Consulta leilões em aberto
+GET http://localhost:8080/auction?status=0 HTTP/1.1
+
+####
+# Consulta leilões fechados
+GET http://localhost:8080/auction?status=1 HTTP/1.1
+
+####
+# Consulta TODOS os leilões
+GET http://localhost:8080/auction HTTP/1.1
